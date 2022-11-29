@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
+    "configurations": [
+        {
+          "name": "Store client-side",
+          "type": "chrome",
+          "request": "launch",
+          "runtimeExecutable": "yarn",
+          "runtimeArgs": ["start:store"],
+          "outputCapture": "std",
+          "internalConsoleOptions": "openOnSessionStart",
+          "env": {
+            "TS_NODE_IGNORE": "false",
+            "TS_NODE_PROJECT": "${workspaceFolder}/apps/store/tsconfig.json"
+          },
+          "cwd": "${workspaceFolder}/apps/store/"
+        },
+        {
+          "name": "Store | client-side",
+          "type": "pwa-chrome",
+          "request": "launch",
+          "url": "http://dev.dejosaigon.vn",
+          "userDataDir": false,
+          "webRoot": "${workspaceFolder}/apps/store/"
+        },
+        {
+          "name": "Next.js: debug full stack",
+          "type": "node-terminal",
+          "request": "launch",
+          "command": "npm run dev",
+          "console": "integratedTerminal",
+          "serverReadyAction": {
+            "pattern": "started server on .+, url: (https?://.+)",
+            "uriFormat": "%s",
+            "action": "debugWithChrome"
+          }
+        }
+      ]
+  }

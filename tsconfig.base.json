@@ -14,7 +14,32 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@admin/components/*": ["apps/admin/components/*"],
+      "@admin/configs/*": ["apps/admin/configs/*"],
+      "@admin/interfaces/*": ["apps/admin/interfaces/*"],
+      "@admin/redux/*": ["apps/admin/redux/*"],
+      "@admin/services/*": ["apps/admin/services/*"],
+      "@admin/hooks/*": ["apps/admin/hooks/*"],
+      "@blog/components/*": ["apps/blog/components/*"],
+      "@blog/configs/*": ["apps/blog/configs/*"],
+      "@blog/interfaces/*": ["apps/blog/interfaces/*"],
+      "@blog/redux/*": ["apps/blog/redux/*"],
+      "@blog/services/*": ["apps/blog/services/*"],
+      "@blog/styles/*": ["apps/blog/styles/*"],
+      "@blog/utils/*": ["apps/blog/utils/*"],
+      "@shared-utils/*": ["libs/shared-utils/*"],
+      "@shared-components/*": ["libs/shared-components/*"],
+      "@shared-types/*": ["libs/shared-types/*"],
+      "@store/components/*": ["apps/store/components/*"],
+      "@store/configs/*": ["apps/store/configs/*"],
+      "@store/interfaces/*": ["apps/store/interfaces/*"],
+      "@store/public/*": ["apps/store/public/*"],
+      "@store/redux/*": ["apps/store/redux/*"],
+      "@store/services/*": ["apps/store/services/*"],
+      "@store/styles/*": ["apps/store/styles/*"],
+      "@store/utils/*": ["apps/store/utils/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
