@@ -102,10 +102,12 @@ const Images = () => {
 
   const arrImages: RcFile[] = [];
 
+  console.log(listFileImages);
+
+
   /* Fetch Images from BE */
   useEffect(() => {
     axios.get(`${process.env.NEXT_PUBLIC_URL_API}/image`).then((res) => {
-      ;
       setDataTable(handleDataTable(res.data[0]));
     });
   }, [update]);

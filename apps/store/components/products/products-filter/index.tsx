@@ -1,4 +1,4 @@
-import { IProductCategory } from "@interfaces/product.interface";
+import { IProductCategory } from "@shared-types/src";
 import React, { useCallback, useMemo, useState } from "react";
 import {
   FilterCategory,

@@ -27,20 +27,15 @@ const Products: NextPage<Props> = ({
   categories,
 }) => {
   const route = useRouter();
-  const [listUnitProduct, setListUnitProduct] = useState<IProduct[]>(items);
+  const [listUnitProduct, setListUnitProduct] = useState<IProduct[]>([]);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [page, setPage] = useState(2);
   const [filterCategory, setFilterCategory] = useState<string>("");
-
-
-  useEffect(() => {
-    setHasMore(listUnitProduct && listUnitProduct.length < total ? true : false);
-  }, [listUnitProduct, total]);
+  const [totalItem, setTotalItem] = useState(total);
 
 
   const fetchMoreProduct = async () => {
     try {
-      console.log(filterCategory)
       const {
         data: { items, total },
       } = await productService.getProducts.fetch(2, page, filterCategory);
@@ -60,16 +55,22 @@ const Products: NextPage<Props> = ({
 
   const setFilterProduct = (slug: string) => {
     setFilterCategory(slug);
+    setPage(2);
+    setTotalItem(total)
     route.push(`/products/${slug}`);
   };
 
 
   useEffect(() => {
     setListUnitProduct(items);
+    setTotalItem(total);
     if (typeof route.query.slug === "string")
        route.query.slug === "all" ? setFilterCategory('') : setFilterCategory(route.query.slug);
   }, [route.query.slug, items]);
 
+  useEffect(() => {
+    setHasMore(listUnitProduct && listUnitProduct.length < totalItem ? true : false);
+  }, [listUnitProduct, totalItem]);
 
   return (
     <section className="p-2">
