@@ -1,7 +1,7 @@
 import { caxios } from "../axios";
-import { IBlogCreateDTO } from "../../interfaces/blog";
 import { CreateBlogCategoryDTO, createBlogDTO } from "./blogs.interface";
 import React from "react";
+import { IBlogCreateDTO } from "@shared-types/src";
 
 export const Blogs = {
   getBlogs: {

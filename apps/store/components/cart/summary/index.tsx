@@ -1,4 +1,4 @@
-import { FormatCurrency } from '@utils/formatCurrency';
+import { FormatCurrency } from '@shared-utils/src/index';
 import { Divider } from 'antd';
 import React from 'react';
 import { useState } from 'react';

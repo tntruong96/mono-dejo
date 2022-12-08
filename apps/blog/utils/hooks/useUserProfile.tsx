@@ -1,4 +1,4 @@
-import { UserProfile } from "@interfaces/authenticate.interface";
+import { UserProfile } from "@shared-types/src";
 import { useSelector } from "react-redux"
 import { selectProfile } from "../../redux/store/common/commonSlice"
 

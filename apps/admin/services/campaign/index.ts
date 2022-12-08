@@ -1,4 +1,4 @@
-import { ICampainDTO } from "@interfaces/campaign"
+import { ICampainDTO } from "@shared-types/src";
 import axios from "axios"
 import React from "react";
 

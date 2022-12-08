@@ -6,6 +6,9 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
+    "build:admin": "nx build admin",
+    "build:blog": "nx build blog",
+    "build:store": "nx build store",
     "start:admin": "nx serve admin --port=4200",
     "start:blog": "nx serve blog --port=4100",
     "start:store": "nx serve store --port=4000"

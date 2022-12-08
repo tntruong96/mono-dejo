@@ -1,5 +1,5 @@
-import { IItemCart } from "@interfaces/cart.interface";
 import { createSelector, createSlice, current } from "@reduxjs/toolkit";
+import { IItemCart } from "@shared-types/src";
 import { HYDRATE } from "next-redux-wrapper";
 import { RootState } from "..";
 

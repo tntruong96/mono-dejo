@@ -1,5 +1,5 @@
-import { IOptions } from "@admin/interfaces/common";
 import { caxios } from "@admin/services/axios";
+import { IOptions } from "@shared-types/src";
 import axios from "axios";
 
 

@@ -1,4 +1,4 @@
-import { IImage } from "./image.interface";
+import { IImage } from "@shared-types/src";
 
 export interface ICampainDTO{
     name: string,
