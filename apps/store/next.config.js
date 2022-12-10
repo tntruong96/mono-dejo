@@ -16,7 +16,7 @@ const nextConfig = {
     esmExternals: false
   },
   images: {
-      domains: ["dev.dejosaigon.vn", "103.104.119.145"]
+      domains: ["dev.dejosaigon.vn", "store.tntdev.site"]
   },
   nx: {
     // Set this to true if you would like to to use SVGR

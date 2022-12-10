@@ -11,12 +11,12 @@ export const Blogs = {
   },
   getBlogContent: {
     fetch: async (slug: string) => {
-      return caxios.get(`/api/blog/${slug}`);
+      return caxios.get(`${process.env.NEXT_PUBLIC_URL_API}/blog/${slug}`);
     },
   },
   createBlog: {
     fetch: async (dataCreate: IBlogCreateDTO) => {
-      return caxios.post(`/api/blog/create-new`, dataCreate);
+      return caxios.post(`${process.env.NEXT_PUBLIC_URL_API}/blog/create-new`, dataCreate);
     },
   },
   deleteMulti: {
@@ -31,21 +31,21 @@ export const Blogs = {
   }
 };
 
-export const BlogCategories = {
-  create: {
-    fetch: async (createDTO: CreateBlogCategoryDTO) => {
-      return caxios.post("/api/blog-categories/create-new", { ...createDTO });
-    },
-  },
-  getList: {
-    fetch: async () => {
-      return caxios.get("/api/blog-categories/", { withCredentials: true });
-    },
-  },
+// export const BlogCategories = {
+//   create: {
+//     fetch: async (createDTO: CreateBlogCategoryDTO) => {
+//       return caxios.post(`/api/blog-categories/create-new`, { ...createDTO });
+//     },
+//   },
+//   getList: {
+//     fetch: async () => {
+//       return caxios.get("/api/blog-categories/", { withCredentials: true });
+//     },
+//   },
 
-  deleteAll: {
-    fetch: async (ids: React.Key[]) => {
-      return caxios.delete("/api/blog-categories/delete-all", { data: ids });
-    },
-  },
-};
+//   deleteAll: {
+//     fetch: async (ids: React.Key[]) => {
+//       return caxios.delete("/api/blog-categories/delete-all", { data: ids });
+//     },
+//   },
+// };

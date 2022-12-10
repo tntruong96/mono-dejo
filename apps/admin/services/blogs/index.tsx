@@ -11,12 +11,12 @@ export const Blogs = {
   },
   getBlogContent: {
     fetch: async (slug: string) => {
-      return caxios.get(`${process.env.NEXT_PUBLIC_URL_API}//api/blog/${slug}`);
+      return caxios.get(`${process.env.NEXT_PUBLIC_URL_API}/blog/${slug}`);
     },
   },
   createBlog: {
     fetch: async (dataCreate: IBlogCreateDTO) => {
-      return caxios.post(`${process.env.NEXT_PUBLIC_URL_API}//api/blog/create-new`, dataCreate);
+      return caxios.post(`${process.env.NEXT_PUBLIC_URL_API}/blog/create-new`, dataCreate);
     },
   },
   deleteMulti: {

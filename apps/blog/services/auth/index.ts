@@ -5,7 +5,7 @@ import { ILoginData, IRegisterData } from "./authen.interface";
 const Auth = {
     register: {
         fetch: async (registerData: IRegisterData) => {
-            return caxios.post("api/auth/register", {...registerData});
+            return caxios.post(`${process.env.NEXT_PUBLIC_URL_API}/auth/register`, {...registerData});
         }
     },
     login: {
