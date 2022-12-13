@@ -227,7 +227,7 @@ const Images = () => {
             className="root"
             // width={100}
             // height={100}
-            src={`${process.env.NEXT_PUBLIC_WEB_API}/${image.path}`}
+            src={`${process.env.NEXT_PUBLIC_URL_WEB}/${image.path}`}
             alt={image.name}
             preview={{
               onVisibleChange(value, prevValue) {
